@@ -64,8 +64,8 @@ export default function Home() {
         <div
           hidden
           id="snipcart"
-          data-api-key="MzYyMTBhOTQtMTcwZS00ODlkLWJkOGMtOGQ0NzU0MDA1ZTEwNjM3NTQ4Nzg0MTMxMTU3NDA5"
-          data-api-key-test="NzU5YzE4NGYtM2Y1OS00NmJmLTk1MDYtOWZlOTQwZjNjZmIxNjM3NTQ4Nzg0MTMxMTU3NDA5"
+          data-api-key-live="MzYyMTBhOTQtMTcwZS00ODlkLWJkOGMtOGQ0NzU0MDA1ZTEwNjM3NTQ4Nzg0MTMxMTU3NDA5"
+          data-api-key="NzU5YzE4NGYtM2Y1OS00NmJmLTk1MDYtOWZlOTQwZjNjZmIxNjM3NTQ4Nzg0MTMxMTU3NDA5"
           data-config-modal-style="side"
         />
         <a
