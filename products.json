@@ -3,6 +3,26 @@
     "id": "didnt_do_good_job_startup",
     "description": "Own a share of the revenue from this article: How to Know You Didn't Do A Good Job Explaining Your Startup \n\n\n Revenue will be paid out monthly. 50% of the revenue from this article will be paid out to shareholders. \n\n\n You also get a step by step walkthrough of what a Non-Fungible Token is and how one will be used to manage the ownership of this article.",
     "price": "1.00",
-    "image": "/images/own_medium_article.png"
+    "image": "/images/own_medium_article.png",
+    "quantity": 1000000
 
-}]
+},
+{
+    "title": "10% ownership of online course: Neurodiverse Entrepreneurs",
+    "id": "10_percent_neurodiverse_entrepreneurs",
+    "description": "Own 10% of the revenue stream from Neurodiverse Entrepreneurs",
+    "price": "2500.00",
+    "image": "/images/Neurodiverse Entrepreneurs.png",
+    "quantity": 1
+
+},
+{
+    "title": "Test Group Membership for online course: Neurodiverse Entrepreneurs",
+    "id": "member_neurodiverse_entrepreneurs",
+    "description": "Join the test group for Neurodiverse Entrepreneurs and claim your share of the 20% set aside for test group participants!",
+    "price": "50.00",
+    "image": "/images/Neurodiverse Entrepreneurs.png",
+    "quantity": 48
+
+}
+]

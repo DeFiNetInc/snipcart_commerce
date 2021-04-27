@@ -1,12 +1,12 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import products from "../products.json";
-
-export default function Home() {
+import Product from '../components/Product'
+import { getAllProducts } from "../lib/graphcms"
+export default function Home({ products }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>DeFiNet</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://app.snipcart.com" />
         <link rel="preconnect" href="https://cdn.snipcart.com" />
@@ -31,26 +31,9 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          {products.map((product) => {
+          {products.map((product, i) => {
             return (
-              <div key={product.id} className={styles.card}>
-                <img src={product.image} alt={`Preview of ${product.title}`} />
-                <h3>{product.title}</h3>
-                <p>{product.description}</p>
-                <p>${product.price}</p>
-                <p>
-                  <button
-                    className="snipcart-add-item"
-                    data-item-id={product.id}
-                    data-item-image={product.image}
-                    data-item-name={product.title}
-                    data-item-url="/"
-                    data-item-price={product.price}
-                  >
-                    Add to Cart
-                  </button>
-                </p>
-              </div>
+              <Product product={product} key={"product_" + i} />
             );
           })}
         </div>
@@ -79,4 +62,19 @@ export default function Home() {
       </footer>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+  const products = await getAllProducts()
+  
+
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      products,
+    },
+  }
 }
