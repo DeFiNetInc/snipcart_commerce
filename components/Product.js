@@ -14,7 +14,7 @@ export default function Product({ product }) {
       <p>
         <button
           className="snipcart-add-item"
-          data-item-id={product.id}
+          data-item-id={product.slug}
           data-item-image={product.images[0].url}
           data-item-name={product.name}
           data-item-url="/"
