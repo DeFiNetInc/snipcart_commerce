@@ -1,3 +1,4 @@
+import { getAllProductsWithSlug} from "../../lib/graphcms"
 export default function ProductDetails({ product }) {
     console.log(product)
     return (
@@ -14,5 +15,15 @@ export async function getStaticProps(context) {
           product: {}    
           
       }, // will be passed to the page component as props
+    }
+  }
+
+  export async function getStaticPaths() {
+    const products = await getAllProductssWithSlug()
+    return {
+      paths: products.map(({ slug }) => ({
+        params: { slug },
+      })),
+      fallback: true,
     }
   }
