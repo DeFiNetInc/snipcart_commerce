@@ -19,7 +19,7 @@ export async function getStaticProps(context) {
   }
 
   export async function getStaticPaths() {
-    const products = await getAllProductssWithSlug()
+    const products = await getAllProductsWithSlug()
     return {
       paths: products.map(({ slug }) => ({
         params: { slug },
