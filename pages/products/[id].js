@@ -1,9 +1,10 @@
 export default function ProductDetails({ product }) {
     console.log(product)
-    return <div>
+    return (
+    <div>
         This is the detailed product component.
-    </div>>
-
+    </div>
+    );
 }
 
 
